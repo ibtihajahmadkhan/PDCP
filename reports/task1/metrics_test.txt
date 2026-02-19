@@ -1,0 +1,12 @@
+Checkpoint: ./models/best_resnet18.pt
+Accuracy : 0.9279
+Precision: 0.8966
+Recall   : 1.0000
+F1-score : 0.9455
+AUC      : 0.9839
+
+Confusion Matrix [ [TN FP] [FN TP] ]:
+[[189  45]
+ [  0 390]]
+
+Failure cases saved: True

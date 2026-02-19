@@ -1,0 +1,32 @@
+Task 3 – Retrieval Metrics Upgrade
+=================================
+
+Embeddings: ./reports/task3\embeddings_test.npy  shape=(624, 512)
+Labels    : ./reports/task3\labels_test.npy  shape=(624,)
+Index(all): ./reports/task3\faiss_index_test.index
+Index(0)  : ./reports/task3\faiss_index_normal.index
+Index(1)  : ./reports/task3\faiss_index_pneumonia.index
+Similarity: cosine (IP on L2-normalized)
+
+GLOBAL INDEX (all samples)
+-------------------------
+Precision@1: 0.9583
+Precision@5: 0.9474
+Precision@10: 0.9462
+mAP: 0.9574
+mAP (Normal=0): 0.9232
+mAP (Pneumonia=1): 0.9778
+
+CLASS-CONDITIONED INDEX (search only within predicted class)
+-----------------------------------------------------------
+Precision@1: 1.0000
+Precision@5: 1.0000
+Precision@10: 1.0000
+mAP: 1.0000
+mAP (Normal=0): 1.0000
+mAP (Pneumonia=1): 1.0000
+
+VISUALIZATIONS
+--------------
+t-SNE: ./reports/task3\tsne_embeddings.png
+UMAP: ./reports/task3\umap_embeddings.png

@@ -1,0 +1,7 @@
+Task 3 - Retrieval metrics (Test split)
+N=624, D=512
+Similarity: cosine (L2-normalized embeddings + inner product)
+
+Precision@1  = 0.9583
+Precision@5  = 0.9474
+Precision@10 = 0.9462

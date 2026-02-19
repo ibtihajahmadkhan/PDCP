@@ -1,0 +1,49 @@
+# -----------------------------
+# Core scientific stack
+# -----------------------------
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+scikit-learn>=1.2
+matplotlib>=3.7
+seaborn>=0.12
+tqdm>=4.65
+
+# -----------------------------
+# Medical dataset
+# -----------------------------
+medmnist>=3.0.0
+
+# -----------------------------
+# Deep learning
+# NOTE: Do NOT pin CUDA build tags (e.g., +cu121) in requirements.txt
+# -----------------------------
+torch>=2.1
+torchvision>=0.16
+
+# -----------------------------
+# Retrieval & embeddings
+# -----------------------------
+faiss-cpu>=1.7.4
+umap-learn>=0.5.5
+
+# -----------------------------
+# Image utilities
+# -----------------------------
+opencv-python>=4.8
+pillow>=10.0
+scikit-image>=0.22
+
+# -----------------------------
+# VLM / Hugging Face
+# -----------------------------
+transformers>=4.40
+accelerate>=0.25
+datasets>=2.18
+sentencepiece>=0.1.99
+safetensors>=0.4
+
+# -----------------------------
+# 4-bit quantization (Task 2)
+# -----------------------------
+bitsandbytes>=0.43
