@@ -12,18 +12,15 @@ import torch
 import torch.nn as nn
 from torchvision import transforms
 from medmnist import PneumoniaMNIST
-
-# Import your Task-1 model (make sure this path is correct)
-# This assumes you have task1_classification/model.py with ResNet18_Gray class
 from task1_classification.model import ResNet18_Gray
 
 
 # ---- Adjust these if your filenames differ ----
 TASK2_MD_PATH = "./reports/task2/generated_reports.md"
-CNN_CKPT_PATH = "./models/best_resnet18.pt"   # <- your Task-1 best checkpoint
+CNN_CKPT_PATH = "./models/best_resnet18.pt"   # <- Task-1 best checkpoint
 OUT_MD_PATH   = "./reports/task2/cnn_vlm_comparison.md"
 
-# If you tuned a balanced-accuracy threshold, set it here (optional).
+# If tuned a balanced-accuracy threshold, set it here (optional).
 # If unknown, keep 0.5 and still report probabilities.
 CNN_THRESHOLD = 0.5
 
@@ -132,7 +129,7 @@ def parse_task2_md(md_path: str):
     )
 
     # report is inside the last ```text ... ``` in the block
-    # We'll capture everything between "**Generated report:**" and the next "```"
+    # capture everything between "Generated report:" and the next "```"
     report_re = re.compile(
         r"\*\*Generated report:\*\*\s*```text\s*(?P<report>.*?)\s*```",
         re.DOTALL | re.IGNORECASE
