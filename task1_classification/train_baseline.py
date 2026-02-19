@@ -75,7 +75,6 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print("device:", device)
 
-    # With 224x224, batch_size 64 is a good start on laptop GPUs
     train_loader, val_loader, test_loader = get_pneumoniamnist_loaders(
         data_root="./data",
         batch_size=64,
@@ -91,8 +90,8 @@ def main():
 
     # ---- Early stopping params ----
     max_epochs = 30
-    patience = 5          # stop if no val_auc improvement for 5 epochs
-    min_delta = 1e-4      # required improvement
+    patience = 5
+    min_delta = 1e-4
     best_val_auc = -1.0
     bad_epochs = 0
 
