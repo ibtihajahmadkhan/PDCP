@@ -2,12 +2,12 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from medmnist import PneumoniaMNIST
-
+import os
 
 def get_pneumoniamnist_loaders(
     data_root: str = "./data",
     batch_size: int = 64,
-    num_workers: int = 2,
+    num_workers: int = 0,
     img_size: int = 224,
 ):
     """
@@ -16,6 +16,7 @@ def get_pneumoniamnist_loaders(
     ResNet18 works better when upsampling from 28x28 -> 224x224.
     """
 
+    os.makedirs(data_root, exist_ok=True)
     # Train augmentation: small rotations and translations
     train_transform = transforms.Compose([
         transforms.Resize((img_size, img_size)),
