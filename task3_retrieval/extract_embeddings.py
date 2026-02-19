@@ -14,8 +14,8 @@ if PROJECT_ROOT not in sys.path:
 from task1_classification.model import ResNet18_Gray  # your model
 
 
-# ---- paths (adjust only if your names differ) ----
-CNN_CKPT_PATH = "./models/best_resnet18.pt"  # your trained checkpoint
+# ---- paths (adjust only if names differ) ----
+CNN_CKPT_PATH = "./models/best_resnet18.pt"  # trained checkpoint
 OUT_DIR = "./reports/task3"
 EMB_PATH = os.path.join(OUT_DIR, "embeddings_test.npy")
 LAB_PATH = os.path.join(OUT_DIR, "labels_test.npy")
@@ -49,7 +49,7 @@ def load_task1_model_as_embedder(device: str):
 
 def get_eval_transform(img_size=224):
     # Use same preprocessing used in Task 1 evaluation
-    # If your Task 1 normalization differs, match it here.
+    # If Task 1 normalization differs, match it here.
     return transforms.Compose([
         transforms.Resize((img_size, img_size)),
         transforms.ToTensor(),
