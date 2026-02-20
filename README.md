@@ -2,6 +2,17 @@
 ## PneumoniaMNIST: Classification, Reasoning, and Semantic Retrieval
 
 ---
+## Table of Contents
+
+- [Overview](#overview)
+- [Dataset](#dataset)
+- [Task 1 – CNN Classification](#task-1--cnn-classification)
+- [Task 2 – Vision-Language Model](#task-2--vision-language-model-vlm-report-generation)
+- [Task 3 – Semantic Image Retrieval](#task-3--semantic-image-retrieval-cnn-embeddings--faiss)
+- [Installation](#installation)
+- [Experimental Limitations](#experimental-limitations)
+- [License](#license)
+---
 
 ## Overview
 
@@ -17,7 +28,7 @@ The system is designed to simulate a simplified clinical reasoning pipeline:
 
 > Perception → Explanation → Case-Based Memory
 
-All experiments and results are implemented in:
+All experiments and evaluations are also implemented in: `PDCP_End_to_End_Demo.ipynb`
 
 
 ---
@@ -65,8 +76,11 @@ Input Image → CNN → Softmax → Predicted Label
 
 The CNN acts as the **perception layer**, extracting visual patterns and mapping them to diagnostic categories.
 
-![PDCP CM](reports/task1/confusion_matrix_test.png)
-![PDCP ROC Curve](reports/task1/roc_curve_test.png)
+<p align="center">
+  <img src="reports/task1/confusion_matrix_test.png" width="400">
+  <img src="reports/task1/roc_curve_test.png" width="400">
+</p>
+
 
 ---
 
@@ -85,7 +99,7 @@ Generate a structured radiology-style report from a chest X-ray using a quantize
 
 ## Pipeline
 
-Input Image → VLM → Clinical Report
+Input Chest X-ray → Vision-Language Model → Clinical Report
 
 
 ## Example Output Structure
@@ -118,10 +132,7 @@ Retrieve semantically and visually similar chest X-ray images given a query imag
 
 ## Architecture
 
-Image → CNN → Feature Embedding → FAISS Index
-↓
-Top-k Retrieval
-
+Image → CNN → Feature Embedding → FAISS Index → Top-k Retrieval
 
 
 ## Procedure
@@ -137,8 +148,8 @@ Top-k Retrieval
 
 ![Global Vs Class Conditional performance (normal)](reports/task3/global_vs_class_conditioned_idx_1.png)
 ![Global Vs Class Conditional performance (abnormal)](reports/task3/global_vs_class_conditioned_idx_88.png)
-![TSNE of CNN Embeddings](reports/task3/tsne_embeddings.png
-![UMAP of CNN Embeddings](reports/task3/umap_embeddings.png
+![TSNE of CNN Embeddings](reports/task3/tsne_embeddings.png)
+![UMAP of CNN Embeddings](reports/task3/umap_embeddings.png)
 
 
 ---
@@ -236,6 +247,7 @@ For consistent results:
 ## License
 
 For academic and research use.
+
 
 
 
