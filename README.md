@@ -56,7 +56,7 @@ Train and evaluate a Convolutional Neural Network (CNN) to classify chest X-rays
 - Normal
 - Pneumonia
 
-## Pipeline
+## Pipeline ([Click to view detailed report](task1_classification/task1_classification_report.md))
 
 Input Image → CNN → Softmax → Predicted Label
 
@@ -81,7 +81,6 @@ The CNN acts as the **perception layer**, extracting visual patterns and mapping
   <img src="reports/task1/roc_curve_test.png" width="400">
 </p>
 
-
 ---
 
 # Task 2 – Vision-Language Model (VLM) Report Generation
@@ -97,7 +96,7 @@ Generate a structured radiology-style report from a chest X-ray using a quantize
 - Robust fallback mechanism
 - CNN vs VLM disagreement analysis
 
-## Pipeline
+## Pipeline ([Click to view detailed report](task2_report_generation/task2_report_generation.md)
 
 Input Chest X-ray → Vision-Language Model → Clinical Report
 
@@ -130,7 +129,7 @@ The VLM serves as the **explanation and reasoning component** of the system.
 
 Retrieve semantically and visually similar chest X-ray images given a query image.
 
-## Architecture
+## Architecture ([Click to view detailed report](task3_retrieval/task3_retrieval_system.md)
 
 Image → CNN → Feature Embedding → FAISS Index → Top-k Retrieval
 
@@ -236,6 +235,7 @@ For consistent results:
 ## License
 
 For academic and research use.
+
 
 
 
