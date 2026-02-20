@@ -11,6 +11,8 @@ This repository presents a complete **end-to-end medical AI pipeline** built on 
 2. **Vision-Language Model (VLM) clinical report generation**
 3. **Semantic image retrieval using CNN embeddings with FAISS**
 
+![PDCP Architecture](block_diagram.png)
+
 The system is designed to simulate a simplified clinical reasoning pipeline:
 
 > Perception → Explanation → Case-Based Memory
@@ -63,6 +65,9 @@ Input Image → CNN → Softmax → Predicted Label
 
 The CNN acts as the **perception layer**, extracting visual patterns and mapping them to diagnostic categories.
 
+![PDCP CM](reports/task1/confusion_matrix_test.png)
+![PDCP ROC Curve](reports/task1/roc_curve_test.png)
+
 ---
 
 # Task 2 – Vision-Language Model (VLM) Report Generation
@@ -99,6 +104,10 @@ This stage provides:
 
 The VLM serves as the **explanation and reasoning component** of the system.
 
+[View Detailed generated reports](reports/task2/generated_reports.md)
+
+[View Detailed CNN vs VLM Comparison](reports/task2/cnn_vlm_comparison.md)
+
 ---
 
 # Task 3 – Semantic Image Retrieval (CNN Embeddings + FAISS)
@@ -126,9 +135,11 @@ Top-k Retrieval
 
 **Precision@k** measures the proportion of retrieved images (within top-k) that share the same label as the query.
 
-## Purpose
+![Global Vs Class Conditional performance (normal)](reports/task3/global_vs_class_conditioned_idx_1.png)
+![Global Vs Class Conditional performance (abnormal)](reports/task3/global_vs_class_conditioned_idx_88.png)
+![TSNE of CNN Embeddings](reports/task3/tsne_embeddings.png
+![UMAP of CNN Embeddings](reports/task3/umap_embeddings.png
 
-This stage simulates **clinical case-based reasoning**, where similar historical cases are retrieved to assist decision-making.
 
 ---
 
@@ -225,6 +236,7 @@ For consistent results:
 ## License
 
 For academic and research use.
+
 
 
 
