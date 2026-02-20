@@ -209,17 +209,6 @@ Run all cells sequentially from top to bottom.
 
 ---
 
-## Potential Extensions
-
-- Add ROC curve and AUC analysis
-- Include Recall@k, mAP, or nDCG for retrieval
-- Visualize embedding space using t-SNE or UMAP
-- Fine-tune embeddings using contrastive learning
-- Perform VLM hallucination analysis
-- Add statistical confidence intervals
-
----
-
 ## Research Applications
 
 This framework can serve as a foundation for:
@@ -247,6 +236,7 @@ For consistent results:
 ## License
 
 For academic and research use.
+
 
 
 
